@@ -14,6 +14,8 @@ int main(void)
 	char *clean_input;
 	char *argv[2] = {NULL};
 
+	signal(SIGINT, catch_c_c);
+
         /* Separando memoria para la entrada del comando */
 	lineptr = malloc(MAX_INPUT_CHARS);
 	if (lineptr == NULL)

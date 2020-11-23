@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <signal.h>
 
 /**
  * main - CLI and start program
@@ -12,6 +13,8 @@ int main(void)
 	size_t buffersize = 256;
 	char *clean_input;
 	int status;
+
+	signal(SIGINT, catch_c_c);
 
 	while(1)
 	{
@@ -43,5 +46,5 @@ int main(void)
 	wait(&status);
 
 	}
-	return (0);
+	exit (-1);
 }
