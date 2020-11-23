@@ -13,5 +13,5 @@
 void launchPrompt(void);
 char *_strremovechar(char *str, char ch);
 int _strlen(char *str);
-
+void makefork(char *str);
 #endif /* HOLBERTON_H */
