@@ -1,29 +1,39 @@
 #include "holberton.h"
 
-int main(void)
+int main(int argc, char **argv[], char **env[])
 {
 	char *user_input;
 	size_t buffersize = 256;
 	char *clean_input;
+	int status;
+	pid_t pid;
 
-	launchPrompt();
 
-	user_input = malloc(sizeof(char) * buffersize);
-	if (user_input == NULL)
+        pid = getpid();
+
+	while (1)
 	{
-		free(user_input);
-		return (-1);
-	}
+		launchPrompt();
 
-	if (getline(&user_input, &buffersize, stdin) == EOF)
-	{
-		free(user_input);
-		EOF;
+		user_input = malloc(sizeof(char) * buffersize);
+		if (user_input == NULL)
+		{
+			free(user_input);
+			return (-1);
+		}
+		if (getline(&user_input, &buffersize, stdin) == EOF)
+		{
+			free(user_input);
+			break;
+		}
+		else
+		{
+			clean_input = _strremovechar(user_input, '\n');
+
+			makeFork(clean_input);
+		}
+		wait(&status);
 		return (0);
 	}
-
-	clean_input = _strremovechar(user_input, '\n');
-
-	printf("%s sin new-line\n", clean_input);
-	return (0);
+       	return (0);
 }
