@@ -13,7 +13,6 @@ int main(void)
 	size_t buffersize = 256;
 	char *clean_input;
 	int status;
-
 	signal(SIGINT, catch_c_c);
 
 	while(1)
@@ -25,26 +24,26 @@ int main(void)
 	if (user_input == NULL)
 	{
 		free(user_input);
-		return (-1);
+		return (0);
 	}
 
 	if (getline(&user_input, &buffersize, stdin) == EOF)
 	{
 		free(user_input);
 		EOF;
-		return (0);
+		return (-1);
 
 	}
 	else
 
 	{
 	clean_input = _strremovechar(user_input, '\n');
+	wait(&status);
 
 	makefork(clean_input);
 	}
-	
-	wait(&status);
-
+/*	wait(&status);*/
+	sleep(0);
 	}
-	exit (-1);
+	exit (1);
 }

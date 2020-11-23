@@ -3,5 +3,5 @@
 
 void launchPrompt(void)
 {
-	printf("#musicianshell$ ");
+	printf("$ ");
 }
