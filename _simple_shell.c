@@ -39,7 +39,8 @@ int main(void)
 	{
 	clean_input = _strremovechar(user_input, '\n');
 	wait(&status);
-
+	}
+	{
 	makefork(clean_input);
 	}
 /*	wait(&status);*/
