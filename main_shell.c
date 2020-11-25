@@ -1,9 +1,13 @@
 #include "holberton.h"
 
-
+/**
+ * main - call the function that start the shell.
+ *
+ * Return: On success, always O.
+ */
 int main(void)
 {
-        launchPrompt();
+	launchPrompt();
 
-        return (0);
+	return (0);
 }

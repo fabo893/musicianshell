@@ -3,6 +3,12 @@
 #define BUFSIZE 64
 #define DELIMITER " \t\r\n\a"
 
+/**
+ * **split - get the user input and split in tokens.
+ * @input: pointer to char.
+ *
+ * Return: On success, pointer to pointer with tokens
+ */
 char **split(char *input)
 {
 	int bufsize = BUFSIZE;
