@@ -1,6 +1,6 @@
 #include "holberton.h"
 
-int _sexit(char **tokens);
+int _sexit();
 int _cd(char **tokens);
 
 char *str_builtins[] = {"exit"};
@@ -13,7 +13,7 @@ int num_builtins()
 }
 
 
-int _sexit(char **tokens)
+int _sexit()
 {
 	return (0);
 }

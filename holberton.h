@@ -15,7 +15,7 @@ void launchPrompt(void);
 char *rdcmd(void);
 char **split(char *input);
 int exeprg(char **tokens);
-int _sexit(char **tokens);
+int _sexit();
 char *str_builtins[1];
 int (*fun_builtins[1]) (char **);
 int num_builtins();

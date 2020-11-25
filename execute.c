@@ -3,7 +3,6 @@
 int exeprg(char **tokens)
 {
 	int idx;
-	int num;
 
 	if(tokens[0] == NULL)
 		return (1);
