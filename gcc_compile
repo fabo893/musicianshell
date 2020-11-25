@@ -1,0 +1,2 @@
+#!/bin/bash
+gcc -Wall -Wextra -Werror -pedantic wait.c signals.c launchPrompt.c stringHelps.c makefork.c _simple_shell.c -o hsh
